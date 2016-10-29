@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>布局1</title>
+    <style>
+        div.content {
+        }
+        div>*:nth-child(1){
+            /*column-count: 2;*/
+            column-width: 100px;
+            background: #a57eff;
+        }
+        div>*:nth-child(2){
+            column-count: 3;
+            background: #68ff9d;
+            column-gap: 40px;
+            column-rule:5px solid #cdd;
+        }
+        div.one{
+            width:50px;
+            height:50px;
+            background: cadetblue;
+        }
+        div.two{
+            width:50px;
+            height:50px;
+            background: seagreen;
+        }
+
+    </style>
+</head>
+<body>
+<div class="content">
+    <div>
+        使用Transactions功能时只能通过指定属性的开始值与结束值，然后在这两个属性值之间进行平滑过渡的方式来实现动画效果。因此不能实现比较复杂的动画效果；而Animations则通过定义多个关键帧以及每个关键帧中元素的属性值来实现更为复杂的动画效果在CSS3之前，如果要使用图像边框，当元素的长或宽随可变时，页面制作者通常采用的做法是让元素的每条边单独使用一副图像，针对这种情况，CSS3增加了一个border-image属性，可以让元素的长度或宽度变化时能够自适应。
+    </div>
+    <div>
+        <div class="one">one</div>
+        <div class="two">two</div>
+        使用Tran开始值与结束值，然后在这两个属性值之间进行平滑过渡的方式来实现动画效果。因此不能实现比较复杂的动画效果；而Animations则通过定义多个关键帧以及每个关键帧中元素的属性值来实现更为复杂的动画效果在CSS3之前，如果要使用图像边框，当元素的长或宽随可变时，页面制作者通常采用的做法是让元素的每条边单独使用一副图像，针对这种情况，CSS3增加了一个border-image属性，可以让元素的长度或宽度变化时能够自适应。
+    </div>
+
+</div>
+
+</body>
+</html>

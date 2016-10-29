@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+    <style>
+        div.one{
+            width: 100px;
+            height: 100px;
+            background: #a57eff;
+        }
+        div.one:hover{
+            animation-name: one;
+            animation-duration: 10s;
+            animation-iteration-count: 2;
+            animation-direction: reverse;
+
+        }
+        /*设定动画*/
+        @keyframes one {
+            0%{
+                background: palevioletred;
+            }
+            20%{
+                margin-left: 200px;
+            }
+            40%{
+                margin-left: 600px;
+            }
+            80%{
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="one"></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+    <style>
+        div.content{
+            width: 90%;
+            background: #ff7f8f;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .content:after{
+            content: ".";
+            display: block;
+            visibility: hidden;
+            clear: both;
+        }
+        .box{
+            width: 250px;
+            height: 210px;
+            background: #a57eff;
+            float: left;
+            margin: 14px;
+            flex: 1;
+        }
+        .one{
+            width: 300px;
+            background: #68ff9d;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="one"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+    </div>
+</body>
+</html>

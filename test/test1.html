@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test1</title>
+    <style>
+        div.one{
+            width:500px;
+            height: 300px;
+            border:10px solid #a57eff;
+            padding:10px;
+            margin: 10px;
+            background-image: url("../images/1.jpg"), url("../images/2.jpg");
+            background-repeat:no-repeat,no-repeat;
+            background-position: left,right;
+            background-origin: content-box;
+            background-size: contain;
+            background-clip:padding-box;
+            border-radius:10px 30px 60px 100px;
+        }
+        div.one:active{
+            transform-origin: left;
+            transform:scale(1.5);
+            transform:skew(1deg,34deg);
+        }
+    </style>
+</head>
+<body>
+<div class="one">
+
+</div>
+</body>
+</html>

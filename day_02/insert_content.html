@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h2:before{
+            content: ".";
+            margin: 5px;
+            background: #ff7f8f;
+        }
+        hgroup>h2:nth-child(2):before{
+            content: none;
+        }
+        img:after{
+            content:attr(alt);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <hgroup>
+        <h2>1</h2>
+        <h2>2</h2>
+        <h2>3</h2>
+    </hgroup>
+    <article>
+        <p><alt ="dddd" img src="../images/" ></p>
+        <p><img src="" alt=""></p>
+        <p><img src="" alt=""></p>
+    </article>
+</header>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul>li{
+            cursor: pointer;
+        }
+        li:hover{
+            list-style: none;
+        }
+        li:active{
+            color: #ff7f8f;
+        }
+        #edit:focus{
+            background: #a57eff;
+        }
+        input:read-only{
+            background-color:#ccc;
+        }
+        /*input:enabled{*/
+            /*background-color: aquamarine;*/
+        /*}*/
+        input[type=submit]:disabled{
+            background-color: #ff7f8f;
+        }
+        input[name=gender]:checked{
+        /*input[name=gender]:default{*/
+            outline: 2px solid rgba(154,181,255,0.88);
+        }
+        p::selection{
+            background-color:  coral;
+        }
+        :invalid{
+            border: 2px solid seagreen;
+        }
+        :out-of-range{
+            background-color: #ff7f8f;
+        }
+    </style>
+</head>
+<body>
+<p>hello</p>
+<ul>
+    <li>你</li>
+    <li>真</li>
+    <li>好</li>
+</ul>
+<div id="edit" contenteditable="true">
+    可编辑
+</div>
+<h2>修改学生信息</h2>
+<form id="one" action="one,action" method="get" enctype="application/x-www-form-urlencoded">
+    <!--readonly 和 disable 的区别 前者会将参数传递给url地址栏中，后者不会-->
+    姓名：<input type="text" name="username" value="张三" readonly> <br>
+    密码：<input type="password" name="password"> <br>
+    年龄：<input type="number" name="age" min="1" max="100"> <br>
+    性别：<input type="radio" name="gender" checked>男
+    <input type="radio" name="gender">女
+    <br>
+    爱好：<input type="checkbox" name="hobby" checked>篮球
+    <input type="checkbox" name="hobby">足球
+    <input type="checkbox" name="hobby">排球
+
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+    <input type="submit" name="oneSubmit">
+    <script>
+        var one =document.getElementById("one");
+        one.addEventListener("submit",function(event){
+
+            var inp = document.getElementsByName("oneSubmit")[0];
+            inp.setAttribute("disabled",true);
+            setTimeout(function(){
+                inp.removeAttribute("disables");
+            },2000)
+            event.preventDefault();
+        },false)
+    </script>
+
+    <input type="search" list="list1">
+    <datalist id="list1">
+        <option value="one">one</option>
+        <option value="two">two</option>
+        <option value="three">three</option>
+    </datalist>
+</form>
+</body>
+</html>

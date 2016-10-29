@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>list</title>
+    <script src="../js/jquery-2.1.4/jquery.min.js"></script>
+    <script>
+        $(function(){
+            var box = $(".box").eq(0);
+            box.mouseover(function(){
+                $(this).children(".desc").animate({"margin-top":0},1000);
+            });
+            box.mouseleave(function(){
+                $(this).children(".desc").animate({"margin-top":200},1000);
+            })
+        })
+    </script>
+    <style>
+        .content{
+            margin: 0 auto;
+            border:1px solid gray;
+            border-radius:3px ;
+
+
+        }
+        .box{
+            background: #68ff9d;
+            transition: width 1s linear;
+            height: 200px;
+            overflow: hidden;
+        }
+        .desc{
+            width: 95%;
+            height: 50%;
+            background: coral;
+            margin: 0 auto ;
+        }
+        .box:hover{
+            box-shadow: 0 0 10px gray;
+        }
+      @media screen and (min-width: 1200px) {
+          /*屏幕尺寸大于1200px*/
+          .content{
+              width: 1024px;
+              overflow: hidden;
+          }
+          .box{
+              float: left;
+              width: 228px;
+              height: 200px;
+              margin: 14px;
+          }
+      }
+
+      @media screen and (min-width:1000px) and (max-width: 1200px){
+          /*屏幕尺寸大于1000px小于1200px*/
+          .content{
+              width: 90%;
+              overflow: hidden;
+          }
+          .box{
+              float: left;
+              width: 20%;
+              margin: 2%;
+          }
+      }
+      @media screen and(max-width: 1000px) {
+            /*屏幕尺寸小于1000px*/
+          .box{
+              width: 100%;
+              margin: 2%;
+
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="box">
+           <div class="desc">java
+           </div>
+        </div>
+        <div class="box">C#</div>
+        <div class="box">javascript</div>
+        <div class="box">HTML</div>
+        <div class="box">java</div>
+        <div class="box">C#</div>
+        <div class="box">javascript</div>
+        <div class="box">HTML</div>
+
+    </div>
+
+</body>
+</html>
